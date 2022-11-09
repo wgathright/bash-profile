@@ -1,6 +1,16 @@
-echo "FROM BASH_PROFILE"
+echo -e "\e[4mFROM BASH_PROFILE\e[0m"
 
-PS1="$(tput setaf 14)\u$(tput sgr0)@$(tput setaf 9)\h$(tput sgr0)[$(tput setaf 10)\w$(tput sgr0)]$ ";
+yellowf="\033[33m"
+redf="\033[31m"
+bluef="\033[34m"
+greenf="\033[32m"
+cyanf="\033[36m"
+
+reset="\033[0m"
+
+
+#PS1="$(tput setaf 14)\u$(tput sgr0)@$(tput setaf 9)\h$(tput sgr0)[$(tput setaf 10)\w$(tput sgr0)]$ ";
+PS1="${cyanf}\u${reset}@${redf}\h${reset}[${greenf}\w${reset}]$ ";
 export PS1;
 
 # append to the history file, don't overwrite it
